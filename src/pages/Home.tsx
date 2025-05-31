@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
+import Logo from '/logo.png'
 
 const Home = () => {
     const [count, setCount] = useState(0);
@@ -7,6 +8,7 @@ const Home = () => {
     return (
         <>
             <h1>Home</h1>
+            <img src={Logo} alt="" />
             <div className="card">
                 <Button onClick={() => setCount((count) => count + 1)}>
                 count is {count}
