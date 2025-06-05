@@ -10,7 +10,7 @@ const Home = () => {
             <h1>Home</h1>
             <img src={Logo} alt="" />
             <div className="card">
-                <Button onClick={() => setCount((count) => count + 1)}>
+                <Button onClick={() => setCount((count) => count + 1)} className='bg-tertiary'>
                 count is {count}
                 </Button>
             </div>
