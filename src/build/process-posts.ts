@@ -1,9 +1,48 @@
 import { Plugin, ResolvedConfig } from 'vite';
 import path from 'path';
-import { readdir } from 'fs';
-// import { readFile, readdir } from 'fs';
+import { PathLike, PathOrFileDescriptor, readdirSync, readFileSync, writeFileSync } from 'fs';
+import parseMD from 'parse-md';
 
-export default function ProcessPosts() : Plugin {
+export interface IPostMetaData {
+    title: string,
+    slug: string,
+    description: string
+}
+
+export interface IPost extends IPostMetaData {
+    content: string
+}
+
+class Post implements IPost {
+
+    readonly title: string = '';
+    readonly content: string = '';
+    readonly slug: string = '';
+    readonly description: string = '';
+
+    constructor(markdown: string) {
+
+        const { metadata, content } = parseMD(markdown);
+        const meta : IPostMetaData = metadata as IPostMetaData;
+
+        this.title = meta.title;
+        this.description = meta.description || '';
+        this.slug = meta.slug;
+
+        this.content = content;
+
+    }
+
+}
+
+export type ProcessPostOptions = {
+    pretty?: boolean,
+    outputDir?: string,
+    pagesInputDir?: string,
+    postsInputDir?: string
+}
+
+export default function ProcessPosts(options : ProcessPostOptions = {}) : Plugin {
 
     let config: ResolvedConfig;
 
@@ -15,37 +54,59 @@ export default function ProcessPosts() : Plugin {
         },
         buildStart() {
 
-            const dirPages = path.join(config.root, '/src/content/pages');
-            const dirPosts = path.join(config.root, '/src/content/posts');
-            
+            // set defaults for empty options
+            options.outputDir = (!options.outputDir) ? path.join(config.root, '/src/content') : options.outputDir;
+            options.pagesInputDir = (!options.pagesInputDir) ? path.join(config.root, '/src/content/pages') : options.pagesInputDir;
+            options.postsInputDir = (!options.postsInputDir) ? path.join(config.root, '/src/content/posts') : options.postsInputDir;
+            options.pretty = (!options.pretty) ? false : options.pretty;
+
             console.log('Processing pages and posts.');
-            console.log('Posts Dir:', dirPosts);
-            console.log('Pages Dir:', dirPages);
+            console.log('Posts Dir:', options.postsInputDir);
+            console.log('Pages Dir:', options.pagesInputDir);
 
-            readdir(dirPages, (err, files) => {
-                if (err) {
-                    return console.error('Failed to read pages directory.');
-                }
+            const pages = ReadDirectory(options.pagesInputDir);
+            const posts = ReadDirectory(options.postsInputDir);
 
-                files.forEach((file, index) => {
-                    console.log(`Reading ${file} (#${index})`);
-
-                    //let page = ParseFile(`${dirPages}/${file}`);
-
-                });
-            });
-            //read all Markdown from content directory
-            // pages
-            // posts
-            // convert to json
+            writeFileSync(`${options.outputDir}/pages.json`, (options.pretty) ? JSON.stringify(pages, null, 4) : JSON.stringify(pages));
+            writeFileSync(`${options.outputDir}/posts.json`, (options.pretty) ? JSON.stringify(posts, null, 4) : JSON.stringify(posts));
+            
         }
     }
 };
 
-// function ParseFile(filepath) {
+function ReadDirectory(dirpath: PathLike): Post[] {
 
-//     readFile(filepath, 'utf-8', (err, content) => {
-//         //const lines = content.split('\n');
-        
-//     })
-// }
+    const posts: Post[] = [];
+
+    try {
+        const files: String[] = readdirSync(dirpath);
+
+        files.forEach((file, index) => {
+            console.log(`Reading ${file} (#${index})`);
+
+            let post = ParseFile(`${dirpath}/${file}`);
+
+            if (post)
+                posts.push(post);
+        });
+
+        return posts;
+    } catch(err) {
+        console.error('Failed to read directory.', dirpath);
+        return posts;
+    }
+
+}
+
+function ParseFile(filepath: PathOrFileDescriptor) : Post | null {
+
+    try {
+        const content: string = readFileSync(filepath, 'utf-8');
+        const post = new Post(content);
+        return post;
+    } catch (err) {
+        console.error('Could not read file:', filepath);
+        return null;
+    }
+
+}

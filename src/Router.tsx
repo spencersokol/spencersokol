@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Blog from './pages/Blog';
 import Portfolio from './pages/Portfolio';
 import Page from './pages/Page';
+import NotFound from './pages/NotFound';
 
 const Router = createBrowserRouter([
   {
@@ -25,7 +26,10 @@ const Router = createBrowserRouter([
         path: '/portfolio',
         element: <Portfolio />
       }, {
-        path: '/*',
+        path: '/404',
+        element: <NotFound />
+      }, {
+        path: '/:slug',
         element: <Page />
       }
     ]

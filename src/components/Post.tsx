@@ -1,6 +1,17 @@
-const Post = () => {
+import { IPost } from "@/build/process-posts";
+
+interface PostProps {
+    post: IPost | undefined
+}
+
+const Post = (props: PostProps) => {
+
+    const { post } = props;
+
     return (
-        <div>Post</div>
+        <article>
+            <h1>{post?.title}</h1>
+        </article>
     )
 }
 
