@@ -1,7 +1,8 @@
-import { IPost } from "@/build/process-posts";
+import { SimplePost } from "@idkwtm/simple-posts"
+import ReactMarkdown from "react-markdown";
 
 interface PostProps {
-    post: IPost | undefined
+    post: SimplePost
 }
 
 const Post = (props: PostProps) => {
@@ -10,7 +11,8 @@ const Post = (props: PostProps) => {
 
     return (
         <article>
-            <h1>{post?.title}</h1>
+            <h1>{post.title}</h1>
+            <ReactMarkdown children={post.content} />
         </article>
     )
 }

@@ -1,8 +1,8 @@
-import { IPost } from "@/build/process-posts";
+import { SimplePost } from "@idkwtm/simple-posts"
 import { Link } from "react-router-dom";
 
 interface PostProps {
-    posts: IPost[]
+    posts: SimplePost[]
 }
 
 const PaginatePosts = (props: PostProps) => {

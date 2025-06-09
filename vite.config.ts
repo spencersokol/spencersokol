@@ -2,14 +2,14 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from "path"
 import tailwindcss from "@tailwindcss/vite"
-import ProcessPosts from './src/build/process-posts'
+import SimplePosts from "@idkwtm/simple-posts/vite"
 
 // https://vite.dev/config/
 export default defineConfig({
     plugins: [
         react(), 
         tailwindcss(),
-        ProcessPosts()
+        SimplePosts()
     ],
     resolve: {
         alias: {

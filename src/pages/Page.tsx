@@ -1,32 +1,43 @@
 import { useParams, useNavigate } from "react-router-dom";
-import pages from '@/content/pages.json';
 import { useEffect, useState } from "react";
-import { IPost } from "@/build/process-posts";
+import { useSimplePostsContext } from '@idkwtm/simple-posts'
+import type { SimplePost } from '@idkwtm/simple-posts'
+import ReactMarkdown from "react-markdown";
 
 const Page = () => {
 
+    const simplePosts = useSimplePostsContext();
     const navigate = useNavigate();
-    const { slug } = useParams();
-    const [page, setPage] = useState<IPost>()
+    const { slug = '' } = useParams();
+    const [page, setPage] = useState<SimplePost>()
 
-    const loadPageData = async () => {
+    useEffect(() => {
         
-        let foundPage = pages.find((page: IPost) => page.slug === slug) as IPost | undefined;
+        if (!slug)
+            throw new Error('No slug found for page.');
+
+        const _page = simplePosts.getPageBySlug(slug);
         
-        if (!foundPage) {
+        if (!_page) {
             navigate('/404');
             return;
         }
 
-        setPage(foundPage);
-    }
+        setPage(_page);
 
-    useEffect(() => {
-        loadPageData();
-    }, []);
+    });
 
     return (
-        <div>Page {page?.title}</div>
+        <>
+            { page &&
+                <>
+                    <h1>{page.title}</h1>
+                    <article>
+                        <ReactMarkdown children={page.content} />
+                    </article>
+                </>
+            }
+        </>
     )
 };
 
