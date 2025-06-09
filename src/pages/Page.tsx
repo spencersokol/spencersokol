@@ -31,8 +31,8 @@ const Page = () => {
         <>
             { page &&
                 <>
-                    <h1>{page.title}</h1>
-                    <article>
+                    <article className="markdown">
+                        <h1>{page.title}</h1>
                         <ReactMarkdown children={page.content} />
                     </article>
                 </>

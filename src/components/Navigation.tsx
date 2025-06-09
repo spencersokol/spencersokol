@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 const Navigation = () => {
     return (
         <>
-            <Link to={'/'} className="mx-4">Home</Link>
-            <Link to={'/portfolio/'} className="mx-4">Portfolio</Link>
-            <Link to={'/blog/'} className="mx-4">Blog</Link>
-            <Link to={'/about/'} className="mx-4">About</Link>
+            <Link to={'/'} className="mr-4 flex-none">Home</Link>
+            <span className="grow"></span>
+            <Link to={'/portfolio/'} className="mx-4 flex-none">Portfolio</Link>
+            <Link to={'/blog/'} className="mx-4 flex-none">Blahg</Link>
+            <Link to={'/about/'} className="ml-4 px-2 rounded-full flex-none font-(family-name:--font-savata) bg-white text-tertiary">?</Link>
         </>
     )
 };

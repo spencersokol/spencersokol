@@ -10,7 +10,7 @@ const Post = (props: PostProps) => {
     const { post } = props;
 
     return (
-        <article>
+        <article className="markdown">
             <h1>{post.title}</h1>
             <ReactMarkdown children={post.content} />
         </article>

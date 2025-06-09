@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&family=Savate:wght@900&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+    --font-roboto: "Roboto", sans-serif;
+    --font-savata: "Savate", sans-serif;
     --radius-sm: calc(var(--radius) - 4px);
     --radius-md: calc(var(--radius) - 2px);
     --radius-lg: var(--radius);
@@ -124,6 +127,7 @@
     body {
         @apply bg-background text-foreground;
         background: var(--gradient);
+        font-family: var(--font-roboto);
         min-height: 100vh;
     }
 
@@ -131,5 +135,11 @@
     button:not([disabled]),
     [role="button"]:not([disabled]) {
         cursor: pointer;
+    }
+
+    .markdown {
+        h1, p {
+            @apply mb-4
+        }
     }
 }
