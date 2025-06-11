@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useSimplePostsContext } from '@idkwtm/simple-posts'
-import type { SimplePost } from '@idkwtm/simple-posts'
+import { MySimplePost } from "@/utils/simple-post";
 import ReactMarkdown from "react-markdown";
 
 const Page = () => {
@@ -9,14 +9,14 @@ const Page = () => {
     const simplePosts = useSimplePostsContext();
     const navigate = useNavigate();
     const { slug = '' } = useParams();
-    const [page, setPage] = useState<SimplePost>()
+    const [page, setPage] = useState<MySimplePost>()
 
     useEffect(() => {
         
         if (!slug)
             throw new Error('No slug found for page.');
 
-        const _page = simplePosts.getPageBySlug(slug);
+        const _page = simplePosts.getPageBySlug(slug) as MySimplePost;
         
         if (!_page) {
             navigate('/404');

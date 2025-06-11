@@ -1,7 +1,8 @@
 ---
 title: About
 slug: about
-description: 
+type: post
+description: Something about airplanes
 ---
 I'm Spencer Sokol. Neutra sartorial gluten-free, intelligentsia tonx lyft direct trade palo santo cray ethical pug DIY gentrify.  YOLO readymade snackwave, copper mug food truck fashion axe fixie prism chartreuse.  Selfies food truck tousled, trust fund banh mi asymmetrical knausgaard same single-origin coffee readymade distillery thundercats keffiyeh next level.  Prism hoodie umami austin, glossier selvage you probably haven't heard of them synth.  Typewriter activated charcoal +1 chartreuse mixtape retro pickled.  Cronut kinfolk flannel YOLO, pop-up yr truffaut.  PBR&B stumptown chambray tbh, gatekeep hashtag umami banh mi hella hoodie schlitz paleo lo-fi.
 

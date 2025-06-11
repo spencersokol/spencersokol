@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import posts from '@/content/posts.json';
 import Post from "@/components/Post";
 import PaginatePosts from "@/components/PaginatePosts";
 import { useSimplePostsContext } from '@idkwtm/simple-posts'
-import type { SimplePost } from '@idkwtm/simple-posts'
+import { MySimplePost } from "@/utils/simple-post";
 
 const Blog = () => {
 
@@ -12,13 +11,13 @@ const Blog = () => {
 
     const navigate = useNavigate();
     const { slug } = useParams();
-    const [post, setPost] = useState<SimplePost>()
+    const [post, setPost] = useState<MySimplePost>()
 
     useEffect(() => {
         
         if (slug && !post) {
             
-            const _post = simplePosts.getPostBySlug(slug);
+            const _post = simplePosts.getPostBySlug(slug) as MySimplePost;
 
             if (!_post) {
                 navigate('/404');
@@ -39,7 +38,7 @@ const Blog = () => {
                 <Post post={post} />
             }
             { !slug &&
-                <PaginatePosts posts={posts} />
+                <PaginatePosts posts={simplePosts.getPosts() as MySimplePost[]} />
             }
         </div>
     )

@@ -1,8 +1,8 @@
-import { SimplePost } from "@idkwtm/simple-posts"
 import ReactMarkdown from "react-markdown";
+import { MySimplePost } from "@/utils/simple-post";
 
 interface PostProps {
-    post: SimplePost
+    post: MySimplePost
 }
 
 const Post = (props: PostProps) => {

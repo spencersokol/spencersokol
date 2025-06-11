@@ -1,8 +1,8 @@
-import { SimplePost } from "@idkwtm/simple-posts"
 import { Link } from "react-router-dom";
+import { MySimplePost } from "@/utils/simple-post";
 
 interface PostProps {
-    posts: SimplePost[]
+    posts: MySimplePost[]
 }
 
 const PaginatePosts = (props: PostProps) => {
