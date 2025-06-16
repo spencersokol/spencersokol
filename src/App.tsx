@@ -1,17 +1,36 @@
 import { Outlet, useLocation } from 'react-router-dom'
 import Navigation from './components/Navigation'
-import posts from '@/content/posts.json'
-import pages from '@/content/pages.json'
 import { SimplePostsProvider } from '@idkwtm/simple-posts'
+import { useEffect, useState } from 'react'
+import { MySimplePost } from './utils/simple-post';
 
 function App() {
 
+    const [content, setContent] = useState<MySimplePost[]>([]);
     const { pathname } = useLocation();
 
-    console.log(pathname);
+    useEffect(() => {
+        fetch('/content.json')
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error('Response not OK.');
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (Array.isArray(data)) {
+                    setContent(data);
+                } else {
+                    throw new Error('Bad data from fetch.');
+                }
+            })
+            .catch((err) => {
+                console.error('Unable to load content:', err);
+            })
+    }, []);
 
     return (
-        <SimplePostsProvider posts={posts} pages={pages}>
+        <SimplePostsProvider content={content}>
             <header className='container mx-auto py-4 flex-none'>
                 <section className='py-4 flex justify-end uppercase font-stretch-condensed font-thin'>
                     { ('/' !== pathname) && 
@@ -24,13 +43,9 @@ function App() {
             </main>
             <footer className='container mx-auto py-4 flex-none text-xs font-thin'>
                 <section className='py-4 flex justify-center uppercase'>
-                    &copy; 2025 Spencer R. Soko<span className='rotate-y-180'>l</span>
+                    &copy; { new Date().getFullYear() } Spencer R. Soko<span className='rotate-y-180'>l</span>
                 </section>
             </footer>
-            <div className='bar h-screen w-2 absolute top-0 left-0 bg-secondary'></div>
-            <div className='bar h-screen w-2 absolute top-0 right-4 bg-primary'></div>
-            <div className='bar h-screen w-2 absolute top-0 right-2 bg-tertiary-foreground'></div>
-            <div className='bar h-screen w-2 absolute top-0 right-0 bg-tertiary'></div>
         </SimplePostsProvider>
     )
 }

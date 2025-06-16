@@ -16,6 +16,9 @@ const Page = () => {
         if (!slug)
             throw new Error('No slug found for page.');
 
+        if (!simplePosts.isLoaded()) // wait for data fetch
+            return; 
+
         const _page = simplePosts.getPageBySlug(slug) as MySimplePost;
         
         if (!_page) {

@@ -17,6 +17,9 @@ const Blog = () => {
         
         if (slug && !post) {
             
+            if (!simplePosts.isLoaded()) // wait for data fetch
+                return;
+
             const _post = simplePosts.getPostBySlug(slug) as MySimplePost;
 
             if (!_post) {
