@@ -10,10 +10,10 @@ const Home = () => {
         <>
             <article className='flex flex-col justify-center mx-2'>
                 <img src={Logo} alt="" className='aspect-auto mb-8' />
-                <Card className='bg-tertiary text-white border-10 border-white my-[80px] rounded-3xl drop-shadow-xl'>
+                <Card>
                     <CardContent className='flex'>
                         <div>
-                            <img src={Spencer} alt="I prefer to be entirely unserious." className='aspect-[0.624] max-w-24 md:max-w-48 lg:max-w-64 mt-[100px] drop-shadow-2xl duration-100 ease-in-out scale-[1.4] rotate-4' />
+                            <img src={Spencer} alt="I prefer to be entirely unserious." className='aspect-[0.624] max-w-24 md:max-w-48 lg:max-w-64 -mt-[20px] drop-shadow-2xl duration-100 ease-in-out scale-[1.4] rotate-4' />
                         </div>
                         <div>
                             <p className='pr-8 pt-8 text-right font-semibold text-2xl/5'>
@@ -28,13 +28,13 @@ const Home = () => {
                         </div>
                     </CardContent>
                 </Card>
-                <Card className='bg-tertiary text-white border-10 border-white my-[80px] rounded-3xl drop-shadow-xl'>
+                <Card>
                     <CardContent className='m-8'>
                         <a href="https://music.spencersokol.com/" className='scale-[0.8] rotate-4 -mr-[100px] -mt-[150px] block' aria-roledescription='button'>
                             <img src={Album} alt="What Took So Long? EP cover art" className='drop-shadow-xl' />
                         </a>
                         <p className='font-semibold text-2xl/5'>
-                            I released this back in 2020. And then the world fell apart again. I refuse to blamed for those events.
+                            I released this back in 2020. And then the world fell apart again. I refuse to be blamed for those events.
                         </p>
                     </CardContent>
                 </Card>

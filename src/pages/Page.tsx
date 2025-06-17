@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useSimplePostsContext } from '@idkwtm/simple-posts'
 import { MySimplePost } from "@/utils/simple-post";
 import ReactMarkdown from "react-markdown";
+import Post from "@/components/Post";
 
 const Page = () => {
 
@@ -34,10 +35,7 @@ const Page = () => {
         <>
             { page &&
                 <>
-                    <article className="markdown">
-                        <h1>{page.title}</h1>
-                        <ReactMarkdown children={page.content} />
-                    </article>
+                    <Post post={page} />
                 </>
             }
         </>

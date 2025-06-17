@@ -1,5 +1,6 @@
 import ReactMarkdown from "react-markdown";
 import { MySimplePost } from "@/utils/simple-post";
+import { Card, CardContent, CardHeader } from "./ui/card";
 
 interface PostProps {
     post: MySimplePost
@@ -11,8 +12,12 @@ const Post = (props: PostProps) => {
 
     return (
         <article className="markdown">
-            <h1>{post.title}</h1>
-            <ReactMarkdown children={post.content} />
+            <Card>
+                <CardHeader className="-mt-[115px] text-8xl text-white font-bold">{post.title}</CardHeader>
+                <CardContent>
+                    <ReactMarkdown children={post.content} />
+                </CardContent>
+            </Card>
         </article>
     )
 }
