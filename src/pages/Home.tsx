@@ -19,7 +19,7 @@ const Home = () => {
                             <p className='pr-8 pt-8 text-right font-semibold text-2xl/5'>
                                 I can only guess why you're here. Maybe you'll like my <a href="https://music.spencersokol.com">music.</a> Maybe you want to <Link to={'/blog'}>read something.</Link>
                             </p>
-                            <p className='pr-8 pt-8 text-right font-semibold text-base/3'>
+                            <p className='pr-8 pt-8 text-right text-xs/3'>
                                 Or maybe learn about my <Link to={'/portfolio'}>work</Link>.
                             </p>
                             <p className='mt-[100px] flex justify-center'>
