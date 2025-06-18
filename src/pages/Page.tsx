@@ -2,7 +2,6 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useSimplePostsContext } from '@idkwtm/simple-posts'
 import { MySimplePost } from "@/utils/simple-post";
-import ReactMarkdown from "react-markdown";
 import Post from "@/components/Post";
 
 const Page = () => {

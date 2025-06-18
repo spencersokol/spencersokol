@@ -12,7 +12,11 @@ export default defineConfig({
         react(), 
         tailwindcss(),
         SimplePosts({
-            postFactory: new MySimplePostFactory()
+            postFactory: new MySimplePostFactory(),
+            additionalPostTypes: [{
+                name: 'portfolio',
+                directory: 'portfolio'
+            }]
         }),
         VitePluginWebpCompress()
     ],

@@ -26,6 +26,9 @@ const Router = createBrowserRouter([
         path: '/portfolio',
         element: <Portfolio />
       }, {
+        path: '/portfolio/:slug',
+        element: <Portfolio />
+      },{
         path: '/404',
         element: <NotFound />
       }, {

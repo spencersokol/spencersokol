@@ -13,7 +13,7 @@ const Post = (props: PostProps) => {
     return (
         <article className="markdown">
             <Card>
-                <CardHeader className="-mt-[115px] text-8xl text-white font-bold">{post.title}</CardHeader>
+                <CardHeader className="-mt-[114px] text-8xl text-white font-bold">{post.title}</CardHeader>
                 <CardContent>
                     <ReactMarkdown children={post.content} />
                 </CardContent>

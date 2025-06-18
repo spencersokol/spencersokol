@@ -13,7 +13,7 @@ const Home = () => {
                 <Card>
                     <CardContent className='flex'>
                         <div>
-                            <img src={Spencer} alt="I prefer to be entirely unserious." className='aspect-[0.624] max-w-24 md:max-w-48 lg:max-w-64 -mt-[20px] drop-shadow-2xl duration-100 ease-in-out scale-[1.4] rotate-4' />
+                            <img src={Spencer} alt="I prefer to be entirely unserious." className='aspect-[0.624] max-w-24 md:max-w-48 lg:max-w-64 -mt-[20px] drop-shadow-2xl duration-100 ease-in-out scale-[1.4] rotate-5' />
                         </div>
                         <div>
                             <p className='pr-8 pt-8 text-right font-semibold text-2xl/5'>
@@ -23,7 +23,7 @@ const Home = () => {
                                 Or maybe learn about my <Link to={'/portfolio'}>work</Link>.
                             </p>
                             <p className='mt-[100px] flex justify-center'>
-                                <Link to={'/about/'} className="p-6 text-4xl/4 rounded-full flex-none font-(family-name:--font-savata) bg-white text-tertiary drop-shadow-lg animate-wiggle hover:scale-[1.2] duration-300 ease-in-out">?</Link>
+                                <Link to={'/about/'} className="p-6 text-4xl/4 rounded-full flex-none font-(family-name:--font-savata) bg-white text-tertiary drop-shadow-lg animate-wiggle-lg hover:scale-[1.2] duration-300 ease-in-out">?</Link>
                             </p>
                         </div>
                     </CardContent>

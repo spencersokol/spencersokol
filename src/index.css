@@ -61,6 +61,8 @@
     --drop-shadow-2xl: 0 0 10px rgba(0, 0, 0, 1);
 
     --animate-wiggle: wiggle 1s ease-in-out infinite;
+    --animate-wiggle-sm: wiggle-sm 2s ease-in-out infinite;
+    --animate-wiggle-lg: wiggle-lg 1s ease-in-out infinite;
         
     @keyframes wiggle {
         0%,
@@ -69,6 +71,26 @@
         }
         50% {
             transform: rotate(3deg);
+        }
+    }
+
+    @keyframes wiggle-sm {
+        0%,
+        100% {
+            transform: rotate(-1deg);
+        }
+        50% {
+            transform: rotate(1deg);
+        }
+    }
+
+    @keyframes wiggle-lg {
+        0%,
+        100% {
+            transform: rotate(-5deg);
+        }
+        50% {
+            transform: rotate(5deg);
         }
     }
 }
@@ -164,9 +186,13 @@
         cursor: pointer;
     }
 
-    .markdown {
-        h1, p {
-            @apply mb-4
+    [data-slot=card] {
+        a {
+            @apply text-secondary
+        }
+
+        a:hover {
+            @apply text-black duration-500 ease-in-out;
         }
     }
 

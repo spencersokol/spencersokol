@@ -33,7 +33,7 @@ const Blog = () => {
     });
 
     return (
-        <div>
+        <>
             { !simplePosts.hasPosts() &&
                 <h1>No blog posts</h1>
             }
@@ -43,7 +43,7 @@ const Blog = () => {
             { !slug &&
                 <PaginatePosts posts={simplePosts.getPosts() as MySimplePost[]} />
             }
-        </div>
+        </>
     )
 }
 
