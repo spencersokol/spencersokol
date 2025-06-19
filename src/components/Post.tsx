@@ -12,8 +12,7 @@ const Post = (props: PostProps) => {
 
     return (
         <article className="markdown">
-            <Card>
-                <CardHeader className="-mt-[114px] text-8xl text-white font-bold">{post.title}</CardHeader>
+            <Card title={post.title}>
                 <CardContent>
                     <ReactMarkdown children={post.content} />
                 </CardContent>

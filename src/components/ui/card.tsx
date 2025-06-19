@@ -2,16 +2,25 @@ import * as React from "react"
 
 import { cn } from "@/lib/utils"
 
-function Card({ className, ...props }: React.ComponentProps<"div">) {
+type CardProps = React.ComponentProps<"div"> & {
+  title?: string
+}
+
+function Card({ className, ...props }: CardProps) {
   return (
-    <div
-      data-slot="card"
-      className={cn(
-        "bg-card text-card-foreground flex flex-col gap-6 border py-6 shadow-sm border-10 border-white my-[80px] rounded-3xl drop-shadow-xl",
-        className
-      )}
-      {...props}
-    />
+    <>
+      { props.title && 
+        <h1 className="-mb-[90px] px-8 text-6xl text-white font-bold z-10 relative">{props.title}</h1>
+      }
+      <div
+        data-slot="card"
+        className={cn(
+          "bg-card text-card-foreground flex flex-col gap-6 border py-6 shadow-sm border-10 border-white my-[80px] rounded-3xl drop-shadow-xl",
+          className
+        )}
+        {...props}
+      />
+    </>
   )
 }
 
