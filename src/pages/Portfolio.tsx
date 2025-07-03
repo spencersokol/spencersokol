@@ -40,7 +40,7 @@ const Portfolio = () => {
                 <Post post={portfolio} />
             }
             { !slug &&
-                <PaginatePosts prefix='portfolio' posts={simplePosts.getPostsOfType('portfolio') as MySimplePost[]} />
+                <PaginatePosts title='Portfolio' prefix='portfolio' posts={simplePosts.getPostsOfType('portfolio') as MySimplePost[]} />
             }
         </>
     )

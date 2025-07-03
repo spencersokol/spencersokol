@@ -3,16 +3,17 @@ import { MySimplePost } from "@/utils/simple-post";
 
 interface PostProps {
     posts: MySimplePost[],
-    prefix?: string
+    prefix?: string,
+    title: string
 }
 
 const PaginatePosts = (props: PostProps) => {
 
-    const { posts, prefix = 'blog' } = props;
+    const { posts, prefix = 'blog', title } = props;
 
     return (
         <>
-            <h3>{posts.length} Posts</h3>
+            <h1>{title}</h1>
             {
                 posts.map((post, index) => {
                     return(

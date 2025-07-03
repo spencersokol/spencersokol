@@ -10,7 +10,7 @@ function Card({ className, ...props }: CardProps) {
   return (
     <>
       { props.title && 
-        <h1 className="-mb-[90px] px-8 text-6xl text-white font-bold z-10 relative">{props.title}</h1>
+        <h1 className="-mb-[90px] px-8 z-10 relative">{props.title}</h1>
       }
       <div
         data-slot="card"

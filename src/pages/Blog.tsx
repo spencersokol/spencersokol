@@ -41,7 +41,7 @@ const Blog = () => {
                 <Post post={post} />
             }
             { !slug &&
-                <PaginatePosts posts={simplePosts.getPosts() as MySimplePost[]} />
+                <PaginatePosts title='Sometimes I Write Things' posts={simplePosts.getPosts() as MySimplePost[]} />
             }
         </>
     )
