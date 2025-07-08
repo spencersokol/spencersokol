@@ -210,6 +210,14 @@
         @apply text-xl text-white font-bold 
     }
 
+    p {
+        @apply mb-6
+    }
+
+    p:last-of-type {
+        margin-bottom: 0;
+    }
+
     [data-slot=card] {
         a {
             @apply text-secondary

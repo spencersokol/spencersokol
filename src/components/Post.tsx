@@ -1,6 +1,6 @@
 import ReactMarkdown from "react-markdown";
 import { MySimplePost } from "@/utils/simple-post";
-import { Card, CardContent, CardHeader } from "./ui/card";
+import { Card, CardContent } from "./ui/card";
 
 interface PostProps {
     post: MySimplePost
