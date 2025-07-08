@@ -12,6 +12,7 @@ export default defineConfig({
         react(), 
         tailwindcss(),
         SimplePosts({
+            pretty: true,
             postFactory: new MySimplePostFactory(),
             additionalPostTypes: [{
                 name: 'portfolio',

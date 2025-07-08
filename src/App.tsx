@@ -1,6 +1,7 @@
 import { Outlet, useLocation } from 'react-router-dom'
 import Navigation from './components/Navigation'
 import { SimplePostsProvider } from '@idkwtm/simple-posts'
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
 
     return (
         <SimplePostsProvider>
+            <ScrollToTop />
             <header className='container mx-auto py-4 flex-none'>
                 <section className='py-4 flex justify-end uppercase font-stretch-condensed font-thin'>
                     { ('/' !== pathname) && 

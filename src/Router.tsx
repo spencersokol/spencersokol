@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Blog from './pages/Blog';
 import Portfolio from './pages/Portfolio';
 import Page from './pages/Page';
+import Music from './pages/Music';
 import NotFound from './pages/NotFound';
 import App from './App';
 
@@ -28,6 +29,9 @@ const Router = createBrowserRouter([
       }, {
         path: '/portfolio/:slug',
         element: <Portfolio />
+      },{
+        path: '/music',
+        element: <Music />
       },{
         path: '/404',
         element: <NotFound />

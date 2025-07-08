@@ -4,6 +4,7 @@ import Post from "@/components/Post";
 import PaginatePosts from "@/components/PaginatePosts";
 import { useSimplePostsContext } from '@idkwtm/simple-posts'
 import { MySimplePost } from "@/utils/simple-post";
+import { SkeletonPage } from "@/components/ui/skeleton";
 
 const Blog = () => {
 
@@ -15,7 +16,7 @@ const Blog = () => {
 
     useEffect(() => {
         
-        if (slug && !post) {
+        if (slug) {
             
             if (!simplePosts.isLoaded()) // wait for data fetch
                 return;
@@ -32,16 +33,25 @@ const Blog = () => {
         
     });
 
+    if (!simplePosts.isLoaded())
+        return (
+            <SkeletonPage />
+        );
+
+    if (!simplePosts.hasPosts()) {
+        navigate('/404');
+        return;
+    }
+
     return (
         <>
-            { !simplePosts.hasPosts() &&
-                <h1>No blog posts</h1>
-            }
             { (post && slug) &&
                 <Post post={post} />
             }
             { !slug &&
-                <PaginatePosts title='Sometimes I Write Things' posts={simplePosts.getPosts() as MySimplePost[]} />
+                <PaginatePosts title='Sometimes I Write' posts={simplePosts.getPosts() as MySimplePost[]}>
+                    I have many unsettling things to say.
+                </PaginatePosts>
             }
         </>
     )
