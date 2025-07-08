@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useSimplePostsContext } from '@idkwtm/simple-posts'
 import { MySimplePost } from "@/utils/simple-post";
 import Post from "@/components/Post";
+import { SkeletonPage } from "@/components/ui/skeleton";
 
 const Page = () => {
 
@@ -32,11 +33,11 @@ const Page = () => {
 
     return (
         <>
-            { page &&
-                <>
-                    <Post post={page} />
-                </>
-            }
+            { page ? (
+                <Post post={page} />
+            ) : (
+                <SkeletonPage />
+            )}
         </>
     )
 };
