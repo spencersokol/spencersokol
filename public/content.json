@@ -4,9 +4,8 @@
         "title": "What's All This...?",
         "type": "page",
         "slug": "about",
-        "date": "2025-07-09T17:12:04.089Z",
-        "description": "",
-        "youTubeURL": ""
+        "date": "2025-07-08T20:48:39.268Z",
+        "description": ""
     },
     {
         "content": "\n![Exit](/assets/exit.webp#border)\n> The end is nigh.\n\nOr something. ",
@@ -14,8 +13,7 @@
         "type": "post",
         "slug": "starting-over-again",
         "date": "07-08-2025",
-        "description": "You'd think at almost 50 I wouldn't have to keep doing this...",
-        "youTubeURL": ""
+        "description": "You'd think at almost 50 I wouldn't have to keep doing this..."
     },
     {
         "content": "![LCCA eTrak](/assets/etrak.webp#right)\nThe [Lionel Collectors Club of America](https://www.lionelcollectors.org/) run a marketplace for collectible model trains, known as eTrak. The system grew from their newsletter trade, and needed to be modernized for future functionality and ease of use. They had access to their existing database, but the codebase could not be retrieved, so the new system needed to be built from the ground up with all of the existing functionality.\n\nTo do this, we leveraged .Net and Entity Framework with clean architecture. Along with their subject matter experts, we were able to reverse engineer their business needs and build an appropriately layered system. The core is their domain models and services, which implements all the necessary busines logic for the marketplace. A database first approach was used with Entity Framework to implement the needed repository logic, and an API layer with thin controllers rounded out the backend. Dependency injection and data mapping tools kept the coupling between the layers low and allows for future infrastructure changes without the need to rewrite the entire system.\n\nThe user interface was left in a minimal state, but leverages the Vue.js component architecture and state management, which will allow the client to easily update the front-end in the future when their priorities allow.",
@@ -23,8 +21,7 @@
         "type": "portfolio",
         "slug": "etrak",
         "date": "10-01-2022",
-        "description": "A fully custom clean architecture project in C# for a collectible model train marketplace.",
-        "youTubeURL": ""
+        "description": "A fully custom clean architecture project in C# for a collectible model train marketplace."
     },
     {
         "content": "The [Digiop](https://digiop.com), [Industrial Valve](https://indvalve.com/), &amp; [Surface Solutions](https://www.surfacesolutionsusa.com/) websites were beautifully designed by a coworker, and they are information dense. Wordpress was chosen as the CMS for its ease of use and flexibility. From a development standpoint, Advanced Custom Post Types was leveraged to ensure that data entry was kept clean on the back end.\n\n![Digiop](/assets/digiop.webp#rotate-right)\n\n![Industrial Valve](/assets/industrial-valve.webp#rotate-left)\n\n![Surface Solutions](/assets/surface-solutions.webp#rotate-right)\n\nThe core of these websites led to a lot of custom code that was turned into a reusable library for future Wordpress sites. It includes numerous custom Gutenburg blocks, custom Wordpress settings, advanced URL rewriting features, and more. While it never fully achieved the level of an internal product during my tenure, the goal was to build an extensive toolset that data entry and designers could leverage to build complex Wordpress sites faster.",
@@ -32,8 +29,7 @@
         "type": "portfolio",
         "slug": "advanced-wordpress",
         "date": "01-01-2020",
-        "description": "Well-designed Wordpress sites that became the basis of an internal product library.",
-        "youTubeURL": ""
+        "description": "Well-designed Wordpress sites that became the basis of an internal product library."
     },
     {
         "content": "EARPS is an exotic animal rescue, and Heather &amp; I are on the board. They have a network of volunteers and foster homes that work to educate the public on the proper care of exotic pets. They also work to help control the pet population through spaying and neutering adoptable animals whenever possible.\n\nIt is an all volunteer rescue, and they needed a website that is easy for multiple people to help manage. That's where Wordpress comes in. I built a custom theme and Heather manages most of the content.\n\n![EARPS](/assets/earps.webp)\n\nThe site contains a custom Vue.js component that allows visitors to filter through all of adoptable animals available from the rescue. The data is pulled from daily from the PetFinder API via a scheduled job, so visitors can always see what animals are still looking for their forever home.\n\n![EARPS Vue.js PetFinder component](/assets/earps-petfinder.webp)\n\nThe site allows users to choose the species, age, and sex of available animals, and shows them relevant information such as whether or not the animal requires special care and handling.",
@@ -41,8 +37,7 @@
         "type": "portfolio",
         "slug": "earps",
         "date": "01-01-2020",
-        "description": "A fully custom Wordpress site that includes a custom Vue.js component to view adoptable animals.",
-        "youTubeURL": ""
+        "description": "A fully custom Wordpress site that includes a custom Vue.js component to view adoptable animals."
     },
     {
         "content": "In the early 2010s, mobile apps were all the rage. And an Indiana local business needed a small marketing app to help make a name for themselves. They partnered with a local consulting firm to design a mobile app that included a game that allowed you to earn coupons for their waxing services.\n\nNaturally, the game was about waxing a monkey.\n\n![Naked Monkey](/assets/naked-monkey.webp)\n\nWith the art and mechanics of the game already created, I was tasked with building an iOS and Android version of the app. The app was built with the Appcelerator Titanium SDK, which allowed for a single codebase for both applications.\n\nThe game itself was similar to the old 80s hit \"Simon\", where you were to follow the hair removal pattern after it flashes on the screen, and mimick the pattern back. Once you met the preset pattern goal, you get rewarded with a coupon from the salon. The coupon functionality was designed to be manageable outside the app, to streamline the process and not have to resubmit the app to the corresponding app stores.\n\nIt was a quirky little game concept, and I enjoyed the challenge of creating *Wax That Monkey!*",
@@ -50,8 +45,7 @@
         "type": "portfolio",
         "slug": "naked-monkey",
         "date": "01-01-2014",
-        "description": "Remember when app stores were new and shiny? Everyone wanted an app, even your local waxing spa.",
-        "youTubeURL": ""
+        "description": "Remember when app stores were new and shiny? Everyone wanted an app, even your local waxing spa."
     },
     {
         "content": "A husband and wife team (something that is near and dear to my heart) thought the area of Broad Ripple, Indiana could use a gaming community. So they set out to build one, and brought Hero’s Emporium into existence.\n\nThey had a dream, and we got to be a small part of that by designing and building a website from the ground up that catered to their desire to have a store that focused not just on products, but as a gathering place for gamers.\n\n![Hero's Emporium](/assets/heros-emporium.webp)\n\nWe were able to base the visuals on a logo they already had designed, and created a site that gave focus to their events and products. We kept costs down by working with the WordPress platform, which also gave the client a system that was easy to learn and use. Functionally, we were looking towards a future where they might like to implement e-commerce, selling products directly from their site, and used Woocommerce to manage their products on the back end.\n\n> We were in the market for a business website and wanted a local web developer. Studio 27 came highly recommended. As most of our customers are media-savvy, we needed something slick and professional-looking that worked equally well on PC, tablet, and phone. Studio 27 delivered a beautiful, easy to navigate site with custom plug-ins that exceeded our expectations and met all our business needs.",
@@ -59,8 +53,7 @@
         "type": "portfolio",
         "slug": "heros-emporium",
         "date": "09-01-2013",
-        "description": "A fully custom Wordpress site for a mom-and-pop gaming shop.",
-        "youTubeURL": ""
+        "description": "A fully custom Wordpress site for a mom-and-pop gaming shop."
     },
     {
         "content": "![Deer Diary](/assets/deer-diary.webp#right)\nThe early days of the app store were an interesting time. Before there were solid toolkits for multiplatform app development, mobile applications required separate codebases. That was the case for Deer Diary, an app that helped hunters keey track of and manage their hunting session data. \n\nWritten in Objective-C and Java, the iOS and Android apps were functional mirrors. My role with these apps was mostly bug-fixing. But managing seperate codebases was a giant hassle, and unfortunately the app was shut down before it could be ported to a more modern framework.",
@@ -68,7 +61,6 @@
         "type": "portfolio",
         "slug": "deer-diary",
         "date": "01-01-2013",
-        "description": "Early mobile apps built in Java and Objective-C.",
-        "youTubeURL": ""
+        "description": "Early mobile apps built in Java and Objective-C."
     }
 ]
