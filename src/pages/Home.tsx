@@ -24,7 +24,7 @@ const Home = () => {
                         </div>
                     </CardContent>
                 </Card>
-                <p className='mt-[20px] sm:mt-[100px] flex justify-center'>
+                <p className='mt-[20px] sm:mt-[50px] mb-[50px] flex justify-center'>
                     <Link to={'/about/'} className="p-6 text-4xl/4 rounded-full flex-none font-(family-name:--font-savate) bg-white text-tertiary drop-shadow-lg animate-wiggle-lg hover:scale-[1.2] duration-300 ease-in-out">?</Link>
                 </p>
             </article>
