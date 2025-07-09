@@ -21,12 +21,12 @@ const Home = () => {
                             <p className='pr-8 pt-3 md:pt-4 lg:pt-8 text-right text-xs/3 font-roboto'>
                                 Or maybe learn about my <Link to={'/portfolio'}>work</Link>.
                             </p>
-                            <p className='mt-[20px] sm:mt-[100px] flex justify-center'>
-                                <Link to={'/about/'} className="p-6 text-4xl/4 rounded-full flex-none font-(family-name:--font-savate) bg-white text-tertiary drop-shadow-lg animate-wiggle-lg hover:scale-[1.2] duration-300 ease-in-out">?</Link>
-                            </p>
                         </div>
                     </CardContent>
                 </Card>
+                <p className='mt-[20px] sm:mt-[100px] flex justify-center'>
+                    <Link to={'/about/'} className="p-6 text-4xl/4 rounded-full flex-none font-(family-name:--font-savate) bg-white text-tertiary drop-shadow-lg animate-wiggle-lg hover:scale-[1.2] duration-300 ease-in-out">?</Link>
+                </p>
             </article>
         </>
     )
