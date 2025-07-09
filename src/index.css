@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&family=Savate:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&family=Savate:wght@900&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -7,6 +7,7 @@
 @theme inline {
     --font-roboto: "Roboto", sans-serif;
     --font-savate: "Savate", sans-serif;
+    --font-insonsolata: "Inconsolata", sans-serif;
     --radius-sm: calc(var(--radius) - 4px);
     --radius-md: calc(var(--radius) - 2px);
     --radius-lg: var(--radius);
@@ -176,7 +177,7 @@
     body {
         @apply bg-background text-foreground;
         background: var(--gradient);
-        font-family: var(--font-roboto);
+        font-family: var(--font-inconsolata);
         min-height: 100vh;
     }
 
@@ -187,27 +188,27 @@
     }
 
     h1 {
-        @apply text-5xl text-white font-bold 
+        @apply text-5xl text-white font-bold font-roboto
     }
 
     h2 {
-        @apply text-4xl text-white font-bold 
+        @apply text-4xl text-white font-bold font-roboto
     }
 
     h3 {
-        @apply text-3xl text-white font-bold 
+        @apply text-3xl text-white font-bold font-roboto 
     }
 
     h4 {
-        @apply text-2xl text-white font-bold 
+        @apply text-2xl text-white font-bold font-roboto 
     }
 
     h5 {
-        @apply text-xl text-white font-bold 
+        @apply text-xl text-white font-bold font-roboto 
     }
 
     h6 {
-        @apply text-xl text-white font-bold 
+        @apply text-xl text-white font-bold font-roboto 
     }
 
     p {
@@ -219,12 +220,41 @@
     }
 
     blockquote {
-        @apply ml-6 pl-6 mr-4 my-4 italic
+        @apply ml-6 pl-6 mr-4 my-4 italic font-roboto
     }
 
     blockquote::before {
         content: "\201C";
         @apply block text-5xl h-0 -left-[50px] relative font-savate
+    }
+
+    img[src$='#border'] {
+        @apply w-[300px] mx-auto my-4 border-10 border-white drop-shadow-xl
+    }
+
+    img[src$='#border-right'] {
+        transform: rotate(3deg);
+        @apply w-[300px] mx-auto my-4 border-10 border-white drop-shadow-xl
+    }
+
+    img[src$='#border-left'] {
+        transform: rotate(-3deg);
+        @apply w-[300px] mx-auto my-4 border-10 border-white drop-shadow-xl
+    }
+
+    img[src$='#right'] {
+        transform: rotate(3deg);
+        @apply w-[150px] float-right pl-6 drop-shadow-xl
+    }
+
+    img[src$='#rotate-right'] {
+        transform: rotate(3deg);
+        @apply ml-10 drop-shadow-xl
+    }
+
+    img[src$='#rotate-left'] {
+        transform: rotate(-3deg);
+        @apply -ml-10 -mt-6 -mb-6 drop-shadow-xl
     }
 
     [data-slot=card] {

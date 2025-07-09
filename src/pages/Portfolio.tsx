@@ -15,6 +15,8 @@ const Portfolio = () => {
 
     useEffect(() => {
         
+        setPortfolio(undefined);
+
         if (slug) {
             
             if (!simplePosts.isLoaded()) // wait for data fetch
@@ -53,7 +55,7 @@ const Portfolio = () => {
                     prefix='portfolio' 
                     posts={simplePosts.getPostsOfType('portfolio') as MySimplePost[]}>
                         <p>
-                            We all must survive under capitalism, and I have mostly done this in the field of software development. I have a wide range of experience across languages and toolsets, from C# to PHP to TypeScript to React to Vue and more. 
+                            We all must survive under capitalism, and I have mostly done this in the field of software development over the past 30 years. I have a wide range of experience across languages and toolsets, from C# to PHP to TypeScript to React, Vue and more. 
                         </p>
                         <p>
                             These are a few examples of the value I have provided to various shareholders as a laborer in the industry.

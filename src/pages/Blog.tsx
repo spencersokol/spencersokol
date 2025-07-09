@@ -16,6 +16,8 @@ const Blog = () => {
 
     useEffect(() => {
         
+        setPost(undefined);
+
         if (slug) {
             
             if (!simplePosts.isLoaded()) // wait for data fetch
@@ -49,8 +51,11 @@ const Blog = () => {
                 <Post post={post} />
             }
             { !slug &&
-                <PaginatePosts title='Sometimes I Write' posts={simplePosts.getPosts() as MySimplePost[]}>
-                    I have many unsettling things to say.
+                <PaginatePosts title='Sometimes I Write...' posts={simplePosts.getPosts() as MySimplePost[]}>
+                    <p>
+                        I remember when blogging was in its heyday: Movable Type, Wordpress, web-rings, "mom-bloggers". What a time to be alive. I miss that energy of free writing and the community of the early internet, before things got weird. So this is my attempt to spit words onto the page again. Except without the spitting. And the "pages" are virtual.
+                    </p>
+                    <p>And besides... I still have many, many unsettling things to say.</p>
                 </PaginatePosts>
             }
         </>
