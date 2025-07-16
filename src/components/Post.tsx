@@ -1,9 +1,9 @@
 import ReactMarkdown from "react-markdown";
-import { MySimplePost } from "@/utils/simple-post";
 import { Card, CardContent } from "./ui/card";
+import { SimplePost } from "@idkwtm/simple-posts";
 
 interface PostProps {
-    post: MySimplePost
+    post: SimplePost
 }
 
 const Post = (props: PostProps) => {

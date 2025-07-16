@@ -1,7 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { useSimplePostsContext } from '@idkwtm/simple-posts'
-import { MySimplePost } from "@/utils/simple-post";
+import { SimplePost, useSimplePostsContext } from '@idkwtm/simple-posts'
 import Post from "@/components/Post";
 import { SkeletonPage } from "@/components/ui/skeleton";
 
@@ -10,7 +9,7 @@ const Page = () => {
     const simplePosts = useSimplePostsContext();
     const navigate = useNavigate();
     const { slug = '' } = useParams();
-    const [page, setPage] = useState<MySimplePost>()
+    const [page, setPage] = useState<SimplePost>()
 
     useEffect(() => {
         
@@ -20,7 +19,7 @@ const Page = () => {
         if (!simplePosts.isLoaded()) // wait for data fetch
             return; 
 
-        const _page = simplePosts.getPageBySlug(slug) as MySimplePost;
+        const _page = simplePosts.getPageBySlug(slug) as SimplePost;
         
         if (!_page) {
             navigate('/404');

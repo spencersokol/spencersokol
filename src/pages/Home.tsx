@@ -12,13 +12,14 @@ const Home = () => {
                 <Card>
                     <CardContent className='flex'>
                         <div>
-                            <img src={Spencer} alt="I prefer to be entirely unserious." className='aspect-[0.624] max-w-32 sm:max-w-64 -mt-[20px] drop-shadow-2xl duration-100 ease-in-out scale-[1.4] rotate-5' />
+                            <img src={Spencer} alt="I prefer to be entirely unserious." className='aspect-[0.624] max-w-48 sm:max-w-64 -mt-[10px] sm:-mt-[20px] drop-shadow-2xl duration-100 ease-in-out scale-[1.4] rotate-5' />
                         </div>
-                        <div>
-                            <p className='pr-8 pt-4 md:pt-6 lg:pt-8 text-right font-semibold text-2xl/5 font-roboto'>
+                        <div className='flex flex-col pr-2 sm:pr-8 py-4 md:py-6 lg:py-8 font-roboto text-right'>
+                            <p className='font-semibold text-xl/5 sm:text-2xl/5'>
                                 I can only guess why you're here. Maybe you'll like my <Link to={'/music'}>music.</Link> Maybe you want to <Link to={'/blog'}>read something.</Link>
                             </p>
-                            <p className='pr-8 pt-3 md:pt-4 lg:pt-8 text-right text-xs/3 font-roboto'>
+                            <p className='grow'></p>
+                            <p className='pb-3 text-xs/3'>
                                 Or maybe learn about my <Link to={'/portfolio'}>work</Link>.
                             </p>
                         </div>

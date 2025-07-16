@@ -1,39 +1,43 @@
-import { SimplePostFactory, SimplePost, ISimplePost, ISimplePostMetaData } from "@idkwtm/simple-posts";
+/**
+ * SimplePost extensibility example
+ */
 
-export interface IMySimplePostMetaData extends ISimplePostMetaData {
-    youTubeURL: string
-}
+// import { SimplePostFactory, SimplePost, ISimplePost, ISimplePostMetaData } from "@idkwtm/simple-posts";
 
-export interface IMySimplePost extends IMySimplePostMetaData, ISimplePost {
-    getYouTubeEmbedCode(): string;
-}
+// export interface IMySimplePostMetaData extends ISimplePostMetaData {
+//     youTubeURL: string
+// }
 
-export class MySimplePost extends SimplePost implements IMySimplePost {
+// export interface IMySimplePost extends IMySimplePostMetaData, ISimplePost {
+//     getYouTubeEmbedCode(): string;
+// }
 
-    youTubeURL: string;
+// export class MySimplePost extends SimplePost implements IMySimplePost {
 
-    constructor(data: IMySimplePost) {
-        super(data);
-        this.youTubeURL = data.youTubeURL;
-    }
+//     youTubeURL: string;
 
-    getYouTubeEmbedCode() : string {
-        if (!this.youTubeURL)
-            return '';
+//     constructor(data: IMySimplePost) {
+//         super(data);
+//         this.youTubeURL = data.youTubeURL;
+//     }
 
-        return `<iframe width="560" height="315" src="${this.youTubeURL}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
-    };
-}
+//     getYouTubeEmbedCode() : string {
+//         if (!this.youTubeURL)
+//             return '';
 
-export class MySimplePostFactory extends SimplePostFactory {
+//         return `<iframe width="560" height="315" src="${this.youTubeURL}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+//     };
+// }
 
-    createPost(meta: IMySimplePostMetaData, content: string): IMySimplePost {
+// export class MySimplePostFactory extends SimplePostFactory {
+
+//     createPost(meta: IMySimplePostMetaData, content: string): IMySimplePost {
         
-        const post = super.createPost(meta, content) as IMySimplePost;
+//         const post = super.createPost(meta, content) as IMySimplePost;
 
-        post.youTubeURL = meta.youTubeURL ?? '';
+//         post.youTubeURL = meta.youTubeURL ?? '';
 
-        return new MySimplePost(post);
-    }
+//         return new MySimplePost(post);
+//     }
     
-}
+// }

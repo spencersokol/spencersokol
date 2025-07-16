@@ -2,7 +2,9 @@ import { createBrowserRouter } from 'react-router-dom';
 import ErrorPage from './pages/Error';
 import Home from './pages/Home';
 import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
 import Portfolio from './pages/Portfolio';
+import PortfolioItem from './pages/PortfolioItem';
 import Page from './pages/Page';
 import Music from './pages/Music';
 import NotFound from './pages/NotFound';
@@ -22,13 +24,13 @@ const Router = createBrowserRouter([
         element: <Blog />
       }, {
         path: '/blog/:slug',
-        element: <Blog />
+        element: <BlogPost />
       }, {
         path: '/portfolio',
         element: <Portfolio />
       }, {
         path: '/portfolio/:slug',
-        element: <Portfolio />
+        element: <PortfolioItem />
       },{
         path: '/music',
         element: <Music />

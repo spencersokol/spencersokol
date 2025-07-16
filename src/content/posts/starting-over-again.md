@@ -8,4 +8,4 @@ date: 07-08-2025
 ![Exit](/assets/exit.webp#border)
 > The end is nigh.
 
-Or something. 
+Or something. All I really know is that we've been lied to. I'm well beyond "middle-aged", and I find that quite disconcerting. But we must keep going, because that's where the meaning lies.

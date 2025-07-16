@@ -2,6 +2,8 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* https://colorhunt.co/palette/e88d67f3f7ec006989005c78 */
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {

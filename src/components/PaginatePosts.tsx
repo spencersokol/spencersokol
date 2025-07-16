@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import { MySimplePost } from "@/utils/simple-post";
 import { ReactNode } from "react";
 import { Card, CardContent } from "./ui/card";
+import { SimplePost } from "@idkwtm/simple-posts";
 
 interface PostProps {
-    posts: MySimplePost[],
+    posts: SimplePost[],
     prefix?: string,
     title: string,
     children?: ReactNode
