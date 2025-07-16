@@ -13,12 +13,20 @@ export default defineConfig({
         tailwindcss(),
         VitePluginWebpCompress(),
         SimplePosts({
+            siteTitle: 'Spencer Sokol',
+            siteDescription: 'My Own Personal Digital Garden',
             pretty: true,
             additionalPostTypes: [{
                 name: 'portfolio',
                 directory: 'portfolio',
                 prefix: 'portfolio'
             }],
+            author: {
+                name: 'Spencer Sokol',
+                email: 'spencer@idkwtm.com',
+                link: 'https://spencersokol.com/about/'
+            },
+            rssExcludePostTypes: ['page', 'portfolio'],
             rootUrl: 'https://spencersokol.com'
         })
     ],

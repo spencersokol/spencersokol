@@ -8,7 +8,7 @@ In the early 2010s, mobile apps were all the rage. And an Indiana local business
 
 Naturally, the game was about waxing a monkey.
 
-![Naked Monkey](/assets/naked-monkey.webp)
+![Naked Monkey](https://spencersokol.com/assets/naked-monkey.webp)
 
 With the art and mechanics of the game already created, I was tasked with building an iOS and Android version of the app. The app was built with the Appcelerator Titanium SDK, which allowed for a single codebase for both applications.
 
