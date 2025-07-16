@@ -1,5 +1,7 @@
 # Custom
 /public/content.json
+/public/rss.xml
+/public/sitemap.xml
 
 # Logs
 logs

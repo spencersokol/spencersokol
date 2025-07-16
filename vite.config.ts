@@ -14,11 +14,12 @@ export default defineConfig({
         VitePluginWebpCompress(),
         SimplePosts({
             pretty: true,
-            //postFactory: new MySimplePostFactory(),
             additionalPostTypes: [{
                 name: 'portfolio',
-                directory: 'portfolio'
-            }]
+                directory: 'portfolio',
+                prefix: 'portfolio'
+            }],
+            rootUrl: 'https://spencersokol.com'
         })
     ],
     resolve: {
