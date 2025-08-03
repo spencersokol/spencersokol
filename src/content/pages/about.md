@@ -8,4 +8,3 @@ I'm Spencer Sokol, and this is a sort of digital garden. It fresh and needs time
 ![Epic bed head](https://spencersokol.com/assets/bed-head.webp#border-left)
 
 I've never been good at bios, and this one is no different. I'm a person, just like everyone else. And I deserve love and space and time to figure out who I want to be when I grow up. You deserve all those things too...
-

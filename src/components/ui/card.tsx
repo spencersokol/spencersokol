@@ -7,10 +7,16 @@ type CardProps = React.ComponentProps<"div"> & {
 }
 
 function Card({ className, ...props }: CardProps) {
+
+  // pull out thee title and delete it from props
+  // so it doesn't get added to the div
+  const { title } = props;
+  delete props.title;
+
   return (
     <>
-      { props.title && 
-        <h1 className="-mb-[90px] px-8 z-10 relative">{props.title}</h1>
+      { title && 
+        <h1 className="-mb-[90px] px-8 z-10 relative">{title}</h1>
       }
       <div
         data-slot="card"
