@@ -2,7 +2,7 @@
 title: Making Art In Darkness
 slug: making-art-in-darkneess
 description: I have to try to convince myself that it's OK to want to be creative.
-date: 08-03-2025
+date: 08-13-2025
 ---
 I think it's an entirely fair assessment to say that the American way of life is dying. Our obsession with individualism and exceptionalism has proved rotten, and it has corrupted many of us, perhaps beyond redemption. And yet, we still have to muddle through our daily lives, buying **groceries**, paying **bills**, and trying desperately not to flip off those who still do not understand how fucking roundabouts work. *Jesus*.
 
