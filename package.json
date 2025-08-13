@@ -1,11 +1,11 @@
 {
   "name": "blog",
   "private": true,
-  "version": "4.0.1",
+  "version": "4.0.3",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "generate-version -s package -v ../public/version.json -i ../index.html && tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -19,6 +19,7 @@
     "react-dom": "^19.1.0",
     "react-markdown": "^10.1.0",
     "react-router-dom": "^7.6.2",
+    "react-update-notification": "^1.2.0",
     "tailwind-merge": "^3.3.0",
     "tailwindcss": "^4.1.8"
   },

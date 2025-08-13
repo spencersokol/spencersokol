@@ -17,7 +17,7 @@ const Post = (props: PostProps) => {
                     <ReactMarkdown children={post.content} />
                 </CardContent>
                 <CardFooter className="justify-center font-(family-name:--font-inconsolata) my-5">
-                    &bull; {post.date.getMonth()}/{post.date.getDate()}/{post.date.getFullYear()} &bull;
+                    &bull; {post.date.toLocaleDateString()} &bull;
                 </CardFooter>
             </Card>
         </article>

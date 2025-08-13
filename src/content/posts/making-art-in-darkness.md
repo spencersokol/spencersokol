@@ -1,6 +1,6 @@
 ---
 title: Making Art In Darkness
-slug: making-art-in-darkneess
+slug: making-art-in-darkness
 description: I have to try to convince myself that it's OK to want to be creative.
 date: 08-13-2025
 ---
