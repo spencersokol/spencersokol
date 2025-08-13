@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { SimplePost, useSimplePostsContext } from '@idkwtm/simple-posts'
-import Post from "@/components/Post";
+import PageContent from "@/components/PageContent";
 import { SkeletonPage } from "@/components/ui/skeleton";
 
 const PortfolioItem = () => {
@@ -40,7 +40,7 @@ const PortfolioItem = () => {
     return (
         <>
             { (portfolio && slug) &&
-                <Post post={portfolio} />
+                <PageContent post={portfolio} />
             }
         </>
     )

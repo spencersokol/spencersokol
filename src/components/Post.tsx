@@ -1,5 +1,5 @@
 import ReactMarkdown from "react-markdown";
-import { Card, CardContent } from "./ui/card";
+import { Card, CardContent, CardFooter } from "./ui/card";
 import { SimplePost } from "@idkwtm/simple-posts";
 
 interface PostProps {
@@ -16,6 +16,9 @@ const Post = (props: PostProps) => {
                 <CardContent>
                     <ReactMarkdown children={post.content} />
                 </CardContent>
+                <CardFooter className="justify-center font-(family-name:--font-inconsolata) my-5">
+                    &bull; {post.date.getMonth()}/{post.date.getDate()}/{post.date.getFullYear()} &bull;
+                </CardFooter>
             </Card>
         </article>
     )
