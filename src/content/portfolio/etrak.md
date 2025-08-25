@@ -3,6 +3,7 @@ title: LCCA eTrak
 slug: etrak
 description: A fully custom clean architecture project in C# for a collectible model train marketplace.
 date: 10-01-2022
+published: true
 ---
 ![LCCA eTrak](https://spencersokol.com/assets/etrak.webp#right)
 The [Lionel Collectors Club of America](https://www.lionelcollectors.org/) run a marketplace for collectible model trains, known as eTrak. The system grew from their newsletter trade, and needed to be modernized for future functionality and ease of use. They had access to their existing database, but the codebase could not be retrieved, so the new system needed to be built from the ground up with all of the existing functionality.

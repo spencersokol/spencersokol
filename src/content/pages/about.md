@@ -2,6 +2,7 @@
 title: What's All This...?
 slug: about
 type: page
+published: true
 ---
 I'm Spencer Sokol, and this is a sort of digital garden. It fresh and needs time to grow, and I'm not sure what it will end up being. But it's here and queer and doesn't fear or need anyone to cheer. It's just here because it's here...
 

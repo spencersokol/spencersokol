@@ -3,6 +3,7 @@ title: Naked Monkey
 slug: naked-monkey
 description: Remember when app stores were new and shiny? Everyone wanted an app, even your local waxing spa.
 date: 01-01-2014
+published: true
 ---
 In the early 2010s, mobile apps were all the rage. And an Indiana local business needed a small marketing app to help make a name for themselves. They partnered with a local consulting firm to design a mobile app that included a game that allowed you to earn coupons for their waxing services.
 

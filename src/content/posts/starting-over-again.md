@@ -3,6 +3,7 @@ title: Starting Over Again
 slug: starting-over-again
 description: You'd think at almost 50 I wouldn't have to keep doing this...
 date: 07-08-2025
+published: true
 ---
 
 ![I've always loved this photo. The EXIT sign. The shadow of my self. When the last person who ever remembers any part of me dies, my shadow will fade to nothing.](https://spencersokol.com/assets/exit.webp#border)

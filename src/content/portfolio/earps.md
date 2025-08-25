@@ -3,6 +3,7 @@ title: EARPS
 slug: earps
 description: A fully custom Wordpress site that includes a custom Vue.js component to view adoptable animals.
 date: 01-01-2020
+published: true
 ---
 EARPS is an exotic animal rescue, and Heather &amp; I are on the board. They have a network of volunteers and foster homes that work to educate the public on the proper care of exotic pets. They also work to help control the pet population through spaying and neutering adoptable animals whenever possible.
 

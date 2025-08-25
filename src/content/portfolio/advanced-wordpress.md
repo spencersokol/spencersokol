@@ -3,6 +3,7 @@ title: Digiop, Industrial Valve, & Surface Solutions
 slug: advanced-wordpress
 date: 01-01-2020
 description: Well-designed Wordpress sites that became the basis of an internal product library.
+published: true
 ---
 The [Digiop](https://digiop.com), [Industrial Valve](https://indvalve.com/), &amp; [Surface Solutions](https://www.surfacesolutionsusa.com/) websites were beautifully designed by a coworker, and they are information dense. Wordpress was chosen as the CMS for its ease of use and flexibility. From a development standpoint, Advanced Custom Post Types was leveraged to ensure that data entry was kept clean on the back end.
 

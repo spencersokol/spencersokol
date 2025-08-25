@@ -3,6 +3,7 @@ title: Hero's Emporium
 slug: heros-emporium
 description: A fully custom Wordpress site for a mom-and-pop gaming shop.
 date: 09-01-2013
+published: true
 ---
 A husband and wife team (something that is near and dear to my heart) thought the area of Broad Ripple, Indiana could use a gaming community. So they set out to build one, and brought Hero’s Emporium into existence.
 
