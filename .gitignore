@@ -3,6 +3,7 @@
 /public/rss.xml
 /public/sitemap.xml
 /public/version.json
+/src/version.json
 
 # Logs
 logs

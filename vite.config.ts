@@ -4,6 +4,7 @@ import path from "path"
 import tailwindcss from "@tailwindcss/vite"
 import { SimplePosts } from "@idkwtm/simple-posts/vite"
 import VitePluginWebpCompress from 'vite-plugin-webp-compress';
+import VersionBuilder from './src/utils/app-update/vite-plugin';
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -11,6 +12,7 @@ export default defineConfig({
         react(), 
         tailwindcss(),
         VitePluginWebpCompress(),
+        VersionBuilder(),
         SimplePosts({
             siteTitle: 'Spencer Sokol',
             siteDescription: 'My Own Personal Digital Garden',
